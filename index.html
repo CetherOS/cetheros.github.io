@@ -3,203 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CetherOS | 文件系统项目</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#6273b8',
-                        softblue: '#e8edfb',
-                        darktext: '#2c3041'
-                    },
-                    fontFamily: {
-                        sans: ['Noto Sans SC', 'system-ui', 'sans-serif']
-                    }
-                }
-            }
+    <title>CetherOS轻量系统官网</title>
+    <!-- 简单美化 -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-    </script>
-    <style type="text/tailwindcss">
-        @layer utilities {
-            .logo-fox {
-                width:36px;
-                height:36px;
-            }
-            .card-hover {
-                transition: all 0.3s ease;
-            }
-            .card-hover:hover {
-                transform: translateY(-5px);
-                box-shadow: 0 10px 28px rgba(98, 115, 184, 0.2);
-            }
-            .page-gradient {
-                background: linear-gradient(155deg, #e8edfb 0%, #f8fafe 100%);
-            }
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            background: #0d1117;
+            color: #c9d1d9;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        .box {
+            text-align: center;
+            max-width: 600px;
+        }
+        h1 {
+            font-size: 2.5rem;
+            color: #58a6ff;
+            margin-bottom: 16px;
+        }
+        p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 24px;
+        }
+        a {
+            display: inline‑block;
+            color: #58a6ff;
+            border: 1px solid #58a6ff;
+            padding: 10px 24px;
+            border‑radius: 6px;
+            text‑decoration: none;
+            transition: 0.2s;
+        }
+        a:hover {
+            background-color: #58a6ff;
+            color: #0d1117;
         }
     </style>
 </head>
-<body class="page-gradient min-h-screen text-darktext">
-<!--导航栏｜左上角小白狐LOGO + CetherOS-->
-<nav class="sticky top-0 z‑50 bg-white/70 backdrop‑blur-md shadow-sm">
-    <div class="max-w‑7xl mx-auto px‑4 sm:px‑6 lg:px‑8">
-        <div class="flex justify-between items-center h‑16">
-            <!-- LOGO：小白狐SVG + CetherOS文字 -->
-            <div class="flex items-center gap‑2">
-                <svg class="logo-fox" viewBox="0 0 100 100">
-                    <circle cx="50" cy="50" r="46" fill="#fff" stroke="#adb3c2" stroke-width="2"/>
-                    <path d="M 32 38 C 22 48,24 70,38 82 C 56 94,78 86,86 62 C 92 44,74 30,52 32 C 38 31,28 40,32 38 Z" fill="#ffffff" stroke="#868c9c" stroke-width="2.2"/>
-                    <path d="M 38 34 L 28 20 L 36 24 L 44 33 Z" fill="#fff" stroke="#868c9c" stroke-width="2.2"/>
-                    <path d="M 62 33 L 72 19 L 64 23 L 56 32 Z" fill="#fff" stroke="#868c9c" stroke-width="2.2"/>
-                    <path d="M 38 54 Q 44 50 50 54" stroke="#222" stroke-width="2" fill="none"/>
-                    <path d="M 50 54 Q 56 50 62 54" stroke="#222" stroke-width="2" fill="none"/>
-                    <circle cx="50" cy="62" r="2.5" fill="#222"/>
-                </svg>
-                <span class="text‑xl font‑bold text‑primary">CetherOS</span>
-            </div>
-
-            <div class="hidden md:flex gap‑8">
-                <a href="#home" class="hover:text‑primary transition">首页</a>
-                <a href="#features" class="hover:text‑primary transition">系统特性</a>
-                <a href="#about" class="hover:text‑primary transition">项目介绍</a>
-                <a href="#download" class="hover:text‑primary transition">下载</a>
-            </div>
-
-            <a href="https://github.com/cetheros.github.io" target="_blank" class="flex items-center gap‑1 bg‑primary text‑white px‑4 py‑2 rounded‑lg hover:bg‑[#5161a2]">
-                <i class="fa fa‑github"></i> GitHub
-            </a>
-        </div>
+<body>
+    <div class="box">
+        <h1>👋 Hello，欢迎来到CetherOS官网</h1>
+        <p>这是CetherOS的官方网站</p>
+        <p>开发者个人是一名准初三生，开学后学业较紧，有可能只有等到初中毕业后才更新</p>
+        <a href="https://github.com/CetherOS" target="_blank">访问我的 GitHub</a>
     </div>
-</nav>
-
-<!-- Hero首页 -->
-<section id="home" class="py‑16 md:py‑24">
-    <div class="max‑w‑7xl mx‑auto px‑4 sm:px‑6 lg:px‑8">
-        <div class="grid md:grid‑cols‑2 gap‑10 items‑center">
-            <div>
-                <h1 class="text‑[clamp(2rem,5vw,3.2rem)] font‑bold leading‑tight">CetherOS</h1>
-                <p class="mt‑4 text‑lg text‑gray‑600">
-                    面向爱好者的自定义文件系统实验项目。<br>
-                    注重人性化交互，轻量可扩展，全部开源。
-                </p>
-                <div class="mt‑8 flex flex‑wrap gap‑4">
-                    <a href="#download" class="bg‑primary text‑white px‑6 py‑3 rounded‑lg shadow‑md hover:bg‑[#5161a2]">
-                        <i class="fa fa‑download mr‑2"></i>获取项目
-                    </a>
-                    <a href="#features" class="border‑2 border‑primary text‑primary px‑6 py‑3 rounded‑lg hover:bg‑primary hover:text‑white">
-                        查看特性
-                    </a>
-                </div>
-            </div>
-            <div class="flex justify‑center">
-                <div class="w‑72 h‑72 rounded‑full overflow‑hidden bg‑white shadow‑xl flex items‑center justify‑center">
-                    <svg width="220" height="220" viewBox="0 0 300 300">
-                        <circle cx="150" cy="150" r="136" fill="#ffffff" stroke="#c7ccda" stroke-width="3"/>
-                        <path d="M 100 110 C70 140,75 200,110 230 C160 265,220 245,240 180 C255 130,210 90,150 95 C110 92,85 115,100 110 Z" fill="#ffffff" stroke="#878e9e" stroke-width="3"/>
-                        <path d="M 115 102 L 90 65 L 110 72 L 128 100 Z" fill="#fff" stroke="#878e9e" stroke-width="3"/>
-                        <path d="M 185 100 L 210 62 L 192 70 L 172 98 Z" fill="#fff" stroke="#878e9e" stroke-width="3"/>
-                        <path d="M 115 160 Q 132 152 148 160" stroke="#222" stroke-width="3" fill="none"/>
-                        <path d="M 152 160 Q 168 152 184 160" stroke="#222" stroke-width="3" fill="none"/>
-                        <circle cx="150" cy="178" r="5" fill="#222"/>
-                    </svg>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!--系统特性模块-->
-<section id="features" class="py‑16 bg‑white">
-    <div class="max‑w‑7xl mx‑auto px‑4 sm:px‑6 lg:px‑8">
-        <h2 class="text‑3xl font‑bold text‑center mb‑3">系统特性</h2>
-        <p class="text‑gray‑500 text‑center mb‑12">CetherOS 文件系统设计理念</p>
-        <div class="grid md:grid‑cols‑3 gap‑6">
-            <div class="card‑hover bg‑softblue p‑7 rounded‑xl">
-                <i class="fa fa‑cube text‑primary text‑3xl"></i>
-                <h3 class="text‑xl font‑semibold mt‑4">文件系统优化</h3>
-                <p class="mt‑2 text‑gray‑600">自定义文件存储逻辑，提升读写效率。</p>
-            </div>
-            <div class="card‑hover bg‑softblue p‑7 rounded‑xl">
-                <i class="fa fa‑sliders text‑primary text‑3xl"></i>
-                <h3 class="text‑xl font‑semibold mt‑4">高度可配置</h3>
-                <p class="mt‑2 text‑gray‑600">参数、行为均可自定义，适配不同使用场景。</p>
-            </div>
-            <div class="card‑hover bg‑softblue p‑7 rounded‑xl">
-                <i class="fa fa‑code‑fork text‑primary text‑3xl"></i>
-                <h3 class="text‑xl font‑semibold mt‑4">开源项目</h3>
-                <p class="mt‑2 text‑gray‑600">全部源码公开，欢迎参与开发与提交反馈。</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!--关于项目-->
-<section id="about" class="py‑16">
-    <div class="max‑w‑4xl mx‑auto px‑4">
-        <h2 class="text‑3xl font‑bold text‑center mb‑6">关于 CetherOS</h2>
-        <div class="bg‑white rounded‑xl shadow‑md p‑8">
-            <p class="text‑gray‑700 leading‑relaxed">
-                CetherOS 是一个实验性文件系统项目，面向底层技术爱好者。项目用于学习文件系统、引导、镜像编译相关知识。
-                所有代码托管在 GitHub，你可以查阅源码、文档，提交 Issue 和 PR。
-            </p>
-        </div>
-    </div>
-</section>
-
-<!--GitHub下载模块-->
-<section id="download" class="py‑16 bg‑white">
-    <div class="max‑w‑5xl mx‑auto px‑4">
-        <h2 class="text‑3xl font‑bold text‑center mb‑3">文件下载</h2>
-        <p class="text‑gray‑500 text‑center mb‑10">项目资源全部托管 GitHub</p>
-        <div class="bg‑softblue rounded‑xl p‑8">
-            <div class="grid md:grid‑cols‑2 gap‑8 items‑center">
-                <div>
-                    <h3 class="text‑xl font‑semibold mb‑3">获取项目资源</h3>
-                    <p class="text‑gray‑600 mb‑5">
-                        获取源码、发布包、文档；查看更新日志，提交bug反馈。
-                    </p>
-                    <div class="flex flex‑wrap gap‑4">
-                        <a href="https://github.com/CetherOS/CetherOS" target="_blank" class="inline‑flex items‑center gap‑2 bg‑gray‑800 text‑white px‑5 py‑3 rounded‑lg hover:bg‑black">
-                            <i class="fa fa‑github fa‑lg"></i>GitHub仓库
-                        </a>
-                        <a href="https://github.com/CetherOS/CetherOS/releases" target="_blank" class="inline‑flex items‑center gap‑2 bg‑primary text‑white px‑5 py‑3 rounded‑lg hover:bg‑[#5161a2]">
-                            <i class="fa fa‑download"></i>Releases下载
-                        </a>
-                    </div>
-                </div>
-                <div class="bg‑white rounded‑lg p‑5 shadow‑sm">
-                    <h4 class="font‑semibold mb‑3">可下载内容</h4>
-                    <ul class="space‑y‑3 text‑gray‑700">
-                        <li><i class="fa fa‑file‑code‑o text‑primary mr‑2"></i>项目源码</li>
-                        <li><i class="fa fa‑file‑archive‑o text‑primary mr‑2"></i>发布版本包</li>
-                        <li><i class="fa fa‑file‑text‑o text‑primary mr‑2"></i>技术文档</li>
-                        <li><i class="fa fa‑wrench text‑primary mr‑2"></i>工具脚本</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!--页脚-->
-<footer class="py‑10 bg‑darktext text‑gray‑300">
-    <div class="max‑w‑7xl mx‑auto px‑4 text‑center">
-        <p>CetherOS © 2026｜开源实验项目</p>
-        <p class="mt‑2 text‑sm">仅供学习研究使用</p>
-    </div>
-</footer>
-
-<!--平滑滚动脚本-->
-<script>
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click',e=>{
-            e.preventDefault();
-            const target = document.querySelector(anchor.getAttribute('href'));
-            target && target.scrollIntoView({behavior:"smooth"});
-        })
-    })
-</script>
 </body>
 </html>
